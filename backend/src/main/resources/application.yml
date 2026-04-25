@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/blog_app
+    username: blog_user
+    password: blog_pass
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+  flyway:
+    enabled: true
+
+app:
+  jwt:
+    secret: c3VwZXItc2VjcmV0LWtleS1tdXN0LWJlLWF0LWxlYXN0LTMyLWJ5dGVzLWxvbmctZm9yLWpz
+    expiration-ms: 86400000
+  cors:
+    allowed-origins: http://localhost:5173
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
